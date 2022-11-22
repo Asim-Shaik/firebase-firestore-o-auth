@@ -1,0 +1,130 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100vw;
+  height: 70vw;
+  background: #f1f1f1;
+  margin: 100px auto;
+  word-break: break-all;
+  border: 1px solid rgba(0, 0, 0, 0.274);
+}
+
+.bloc-tabs {
+  display: flex;
+}
+.tabs {
+  padding: 15px;
+  text-align: center;
+  width: 50%;
+  background: rgba(128, 128, 128, 0.075);
+  cursor: pointer;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.274);
+  box-sizing: content-box;
+  position: relative;
+  outline: none;
+}
+.tabs:not(:last-child) {
+  border-right: 1px solid rgba(0, 0, 0, 0.274);
+}
+
+.active-tabs {
+  background: white;
+  border-bottom: 1px solid transparent;
+}
+
+.active-tabs::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% + 2px);
+  height: 5px;
+  background: rgb(88, 147, 241);
+}
+
+button {
+  border: none;
+}
+.content-tabs {
+  flex-grow: 1;
+}
+.content {
+  background: white;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.content h2 {
+  padding: 0px 0 5px 0px;
+  width: 80%;
+}
+.content hr {
+  width: 100px;
+  height: 2px;
+  background: #222;
+  margin-bottom: 5px;
+}
+.content p {
+  width: 80%;
+  height: 100%;
+}
+.active-content {
+  display: block;
+}
+
+.register {
+  height: calc(100vh - 50px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+}
+
+.registerform {
+  width: 15rem;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.registerform > label {
+  margin: 10px 0;
+}
+.registerinput {
+  padding: 10px;
+  background: white;
+  border: solid 1px black;
+  border-radius: 30px;
+  text-align: center;
+}
+
+.registerbutton {
+  padding: 10px;
+  margin-top: 20px;
+  cursor: pointer;
+  background: teal;
+  border: none;
+  color: white;
+  border-radius: 10px;
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+
+.registerloginbutton {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background: teal;
+  cursor: pointer;
+  border: none;
+  padding: 10px;
+  color: white;
+  border-radius: 10px;
+  font-size: 1rem;
+  text-transform: capitalize;
+}
